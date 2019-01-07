@@ -30,6 +30,9 @@
 		5CB3460021E3BEC80046E590 /* AddCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
 		5CB3460221E3C3800046E590 /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		5CB3460421E3C77E0046E590 /* What's that Whistle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "What's that Whistle.entitlements"; sourceTree = "<group>"; };
+		5CB3460621E3CAE80046E590 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		5CB3460721E3CAE80046E590 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		5CB3460821E3CAFB0046E590 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5CCE02C621E1F092009BE09E /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +50,8 @@
 		5C73B21F21E1EE9E007D520A = {
 			isa = PBXGroup;
 			children = (
+				5CB3460821E3CAFB0046E590 /* README.md */,
+				5CB3460521E3CAD70046E590 /* screens */,
 				5C73B22A21E1EE9E007D520A /* What's that Whistle */,
 				5C73B22921E1EE9E007D520A /* Products */,
 			);
@@ -76,6 +81,15 @@
 				5C73B23721E1EEA0007D520A /* Info.plist */,
 			);
 			path = "What's that Whistle";
+			sourceTree = "<group>";
+		};
+		5CB3460521E3CAD70046E590 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3460721E3CAE80046E590 /* 1.jpeg */,
+				5CB3460621E3CAE80046E590 /* 2.jpeg */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
