@@ -113,7 +113,7 @@ class RecordWhistleViewController: UIViewController {
                 }
             }
             
-            recordButton.setTitle("Tap to Re-recodr", for: .normal)
+            recordButton.setTitle("Tap to Re-record", for: .normal)
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextTapped))
         }else{
             recordButton.setTitle("Tap to Record", for: .normal)
