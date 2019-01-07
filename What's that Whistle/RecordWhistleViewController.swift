@@ -18,6 +18,7 @@ class RecordWhistleViewController: UIViewController {
     
     var recordingSession: AVAudioSession!
     var whistleRecorder: AVAudioRecorder!
+    var whistlePlayer: AVAudioPlayer!
     
     //MARK: -
     func loadFailUI() {
@@ -48,7 +49,16 @@ class RecordWhistleViewController: UIViewController {
     }
     
     @objc func playTapped() {
+        let audioURL = RecordWhistleViewController.getWhistleURL()
         
+        do{
+            whistlePlayer = try AVAudioPlayer(contentsOf: audioURL)
+            whistlePlayer.play()
+        }catch{
+            let ac = UIAlertController(title: "Playback failed", message: "There was a problem playing your whistle; please try re-recording.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
     }
     
     @objc func recordTapped() {
@@ -71,7 +81,7 @@ class RecordWhistleViewController: UIViewController {
         recordButton.setTitle("Tap to Stop", for: .normal)
         
         let audioURL = RecordWhistleViewController.getWhistleURL()
-        print(audioURL.absoluteString)
+//        print(audioURL.absoluteString)
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
