@@ -14,6 +14,7 @@ class RecordWhistleViewController: UIViewController {
     var stackView: UIStackView!
     
     var recordButton: UIButton!
+    var playButton: UIButton!
     
     var recordingSession: AVAudioSession!
     var whistleRecorder: AVAudioRecorder!
@@ -35,11 +36,31 @@ class RecordWhistleViewController: UIViewController {
         recordButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         recordButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
         stackView.addArrangedSubview(recordButton)
+        
+        playButton = UIButton()
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.setTitle("Tap to Play", for: .normal)
+        playButton.isHidden = true
+        playButton.alpha = 0
+        playButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
+        playButton.addTarget(self, action: #selector(playTapped), for: .touchUpInside)
+        stackView.addArrangedSubview(playButton)
+    }
+    
+    @objc func playTapped() {
+        
     }
     
     @objc func recordTapped() {
         if whistleRecorder == nil {
             startRecording()
+            
+            if !playButton.isHidden {
+                UIView.animate(withDuration: 0.35) {[unowned self] in
+                    self.playButton.isHidden = true
+                    self.playButton.alpha = 0
+                }
+            }
         }else{
             finishRecodring(success: true)
         }
@@ -75,6 +96,13 @@ class RecordWhistleViewController: UIViewController {
         whistleRecorder = nil
         
         if success {
+            if playButton.isHidden {
+                UIView.animate(withDuration: 0.35) {[unowned self] in
+                    self.playButton.isHidden = false
+                    self.playButton.alpha = 1
+                }
+            }
+            
             recordButton.setTitle("Tap to Re-recodr", for: .normal)
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextTapped))
         }else{
