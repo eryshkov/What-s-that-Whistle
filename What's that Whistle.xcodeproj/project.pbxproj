@@ -29,6 +29,7 @@
 		5CB345FE21E3BB180046E590 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
 		5CB3460021E3BEC80046E590 /* AddCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
 		5CB3460221E3C3800046E590 /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		5CB3460421E3C77E0046E590 /* What's that Whistle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "What's that Whistle.entitlements"; sourceTree = "<group>"; };
 		5CCE02C621E1F092009BE09E /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +63,7 @@
 		5C73B22A21E1EE9E007D520A /* What's that Whistle */ = {
 			isa = PBXGroup;
 			children = (
+				5CB3460421E3C77E0046E590 /* What's that Whistle.entitlements */,
 				5C73B22B21E1EE9E007D520A /* AppDelegate.swift */,
 				5C73B22D21E1EE9E007D520A /* ViewController.swift */,
 				5CB3460221E3C3800046E590 /* SubmitViewController.swift */,
@@ -108,6 +110,11 @@
 				TargetAttributes = {
 					5C73B22721E1EE9E007D520A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -298,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "What's that Whistle/What's that Whistle.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z256VMH9HM;
 				INFOPLIST_FILE = "What's that Whistle/Info.plist";
@@ -317,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "What's that Whistle/What's that Whistle.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z256VMH9HM;
 				INFOPLIST_FILE = "What's that Whistle/Info.plist";
