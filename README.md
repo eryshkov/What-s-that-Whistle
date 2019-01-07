@@ -17,6 +17,8 @@
 ## Main functionality
 * simple audio voice recorder and player with CloudKit support
 * uses `CloudKit`
+* uses `AVFoundation`
+* uses `AVAudioSession`, `AVAudioRecorder`, `AVAudioPlayer`
 * UI without storyboards
 * unfinished project
 
